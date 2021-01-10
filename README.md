@@ -44,6 +44,7 @@ docker start test-postgis
 env | default value | description 
 ------------ | ------------- | -------------
 PBF_URL | https://download.geofabrik.de/europe/germany/thueringen-latest.osm.pbf | URL to PBF-File to import
+IMPORT_FILE | not set | If this is set PBF_URL is ignored and the local file is used instead
 POSTGRES_DB | postgres | Database-Name
 POSTGRES_USER | postgres | Database-User
 POSTGRES_PASSWORD |  | Database-Password
