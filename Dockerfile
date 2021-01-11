@@ -17,6 +17,11 @@ RUN apt-get install -y osm2pgsql git wget
 # Carto-Daten
 WORKDIR /usr/local/src/
 RUN git clone https://github.com/gravitystorm/openstreetmap-carto.git
+RUN rm -rf /usr/local/src/openstreetmap-carto/.git
+
+RUN apt-get purge -y git
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
 
 COPY run.sh /run.sh
 RUN chmod a+x /run.sh
